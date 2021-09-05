@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin-top: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .btngroup {
+  margin-top: 24px;
+}
+.wrapper .btngroup button {
+  margin: 0 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-content: center;
 }
+
+span {
+  width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px dashed #999;
+}
+
+.row:nth-child(3n + 1) span {
+  border-top: none;
+}
+
+.row:nth-child(1) span {
+  border-top: 3px solid #333;
+}
+
+.row:nth-child(3n) span {
+  border-bottom: 3px solid #333;
+}
+
+.row span:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.row span:first-child {
+  border-left: 3px solid #333;
+}
+
+.row span:nth-child(3n) {
+  border-right: 3px solid #333;
+}
+
